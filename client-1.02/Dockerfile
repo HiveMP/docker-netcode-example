@@ -5,7 +5,7 @@ RUN apt-get upgrade -y
 RUN apt-get install -y git wget unzip make libsodium23 libsodium-dev build-essential
 RUN wget https://github.com/premake/premake-core/releases/download/v5.0.0-alpha12/premake-5.0.0-alpha12-linux.tar.gz
 RUN tar -xvf premake-5.0.0-alpha12-linux.tar.gz
-RUN git clone https://github.com/networkprotocol/netcode.io
+RUN git clone https://github.com/hach-que/netcode.io
 WORKDIR /build/netcode.io/
 RUN ../premake5 gmake
 RUN make all
