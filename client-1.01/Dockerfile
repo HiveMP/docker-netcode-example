@@ -14,5 +14,5 @@ FROM ubuntu:18.04
 RUN apt-get update && \
     apt-get install -y libsodium23 && \
     rm -rf /var/lib/apt/lists/*
-COPY --from=build /build/netcode.io/bin/client /client_token
-CMD ["/client_token"]
+COPY --from=build /build/netcode.io/bin/client_token /client_token
+ENTRYPOINT ["/client_token"]

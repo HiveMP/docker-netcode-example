@@ -15,4 +15,4 @@ RUN apt-get update && \
     apt-get install -y libsodium23 && \
     rm -rf /var/lib/apt/lists/*
 COPY --from=build /build/netcode.io/bin/client /client
-CMD ["/client"]
+ENTRYPOINT ["/client"]
